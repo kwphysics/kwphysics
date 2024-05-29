@@ -1,7 +1,6 @@
 - 👋 Hi, I’m @kwphysics
-- 👀 I’m interested in scientific computing, numerical methods, and optical/EM simulation
-- 🌱 I’m currently learning python and R along with prerequisite skills. I was trained as an experimentalist so I'm working hard to level up my computer skill.
-- 💞️ I’m looking to collaborate on scattering models and sensor simulations.
+- 👀 I’m interested in scientific computing, numerical methods, and test system automation.
+- 🌱 I’m currently learning python and C# along. I was trained as an experimentalist so I'm working hard to level up my computer skill.
 - 📫 How to reach me: kwphysics@gmail.com
 
 <!---
