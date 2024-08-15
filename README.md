@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @kwphysics
 - 👀 I’m interested in scientific computing, numerical methods, and test system automation.
-- 🌱 I’m currently working in python and C#. 
+- 🌱 I’m currently working in python, MatLab, and C#. 
 - 📫 How to reach me: kwphysics@gmail.com
 
 <!---
