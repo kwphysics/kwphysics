@@ -1,6 +1,9 @@
 import os
+import subprocess
+
 
 def create_project(project_name):
+    # Define project structure
     structure = [
         f"{project_name}/src/backend",
         f"{project_name}/src/frontend",
@@ -63,16 +66,30 @@ coverage.xml
 *.pyd
 """
 
+    # Create directories and files
     for folder in structure:
         os.makedirs(folder, exist_ok=True)
 
     for file in files:
         with open(file, "w") as f:
             if "settings.json" in file:
-                f.write('{ "python.formatting.provider": "black", "editor.formatOnSave": true }')
+                f.write('{"editor.defaultFormatter": "ms-python.black-formatter", "editor.formatOnSave": true}')
+
             elif ".gitignore" in file:
                 f.write(gitignore_content.strip())
     
+    # Check for virtual environment
+    venv_path = os.path.join(project_name, ".venv")
+    if not os.path.exists(venv_path):
+        print("No virtual environment found. Creating .venv...")
+        try:
+            subprocess.run(["python", "-m", "venv", venv_path], check=True)
+            print("Virtual environment created successfully!")
+        except subprocess.CalledProcessError as e:
+            print(f"Error creating virtual environment: {e}")
+    else:
+        print("Virtual environment already exists.")
+
     print(f"Project {project_name} created successfully!")
 
 if __name__ == "__main__":
